@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+// import Blob from './components/atoms/Blob';
+import Palette from './components/organisms/Palette';
+import paletteTemplate from './helpers/paletteTemplate';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+				blobs: [],
+				size: 20,
+				colorFocus: paletteTemplate[0]
+			};
+		this.addBlobTo = this.addBlobTo.bind(this);
+	}
+
+	addBlobTo(e) {
+		this.setState({
+			blobs: this.state.blobs.concat({x: e.clientX, y: e.clientY})
+		});
+	}
+	
+	handleColorUpdate(c) {
+		this.setState({colorFocus: c});
+	}
+
+	render() {
+		// const blobs = this.state.blobs.map((b) => toBlob(b, this.state.size));
+		return (
+			<div className="container">
+				<Palette onClick={this.handleColorUpdate}/>
+			</div>
+		)
+	}
 }
 
 export default App;

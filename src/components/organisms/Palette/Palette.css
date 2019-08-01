@@ -1,0 +1,38 @@
+/*Palette.css*/
+.palette {
+	box-shadow: 0 2px 6px -1px #7f8c8d;
+	border: 1px solid rgba(96, 121, 125,0.4);
+	background-color: #fff;
+	max-width: 336px;
+	margin: 24px;
+}
+.palette-header {
+	display: flex;
+	flex-direction: column;
+	padding: 24px 0;
+}
+.palette-header > div {
+	margin: 12px auto;
+}
+.palette-colors {
+}
+.color-containers {
+	display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    margin: 0 24px;
+}
+.color-container {
+	max-width: 96px;
+	display: flex;
+}
+.color-individual {
+	display: block;
+	height: 48px;
+	width: 48px;
+	border-radius: 100%;
+	margin: 24px;
+}
+.code-container {
+	
+}
