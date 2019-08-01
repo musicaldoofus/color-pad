@@ -3,9 +3,9 @@ import paletteTemplate from '../../../helpers/paletteTemplate';
 import './Palette.css';
 
 class CodeContainer extends Component {
-	componentDidMount() {
-		console.log('<CodeContainer> componentDidMount');
-	}
+	// componentDidMount() {
+		// console.log('<CodeContainer> componentDidMount');
+	// }
 	
 	render() {
 		const codeDisplay = 'd';
@@ -17,23 +17,19 @@ class CodeContainer extends Component {
 	}
 }
 
-const Color = ({hex}) => (
-	<div className="color-individual" style={{backgroundColor: `#${hex}`}}>
-	
-	</div>
-);
-
 const Toggle = ({type, onClick, label, children}) => (
 	<div className={`btn ${type}`} onClick={onClick}>
 		<p>{label ? label : children}</p>
 	</div>
 );
 
+const Color = ({color, onClick}) => <div className="color-individual" style={{backgroundColor: `#${color.hex}`}} onClick={() => onClick(color)}></div>;
+
 const ColorContainer = ({color, showCode, onClick}) => {
 	const codeContainer = showCode ? <CodeContainer/> : null;
 	return (
 		<div className="color-container">
-			<Color hex={color.hex} onClick={onClick}/>
+			<Color {...color} onClick={onClick}/>
 			{codeContainer}
 		</div>
 	);
@@ -47,26 +43,32 @@ class Palette extends Component {
 			code: null
 		};
 		this.toColorContainer = this.toColorContainer.bind(this);
-		this.handleInput = this.handleInput.bind(this);
+		// this.handleInput = this.handleInput.bind(this);
 		this.handleSelectColor = this.handleSelectColor.bind(this);
+		this.handleStrokeUpdate = this.handleStrokeUpdate.bind(this);
 	}
-	
-	// componentDidUpdate(prevProps, prevState) {
-		// console.log('<Palette> componentDidUpdate');
-	// }
 	
 	handleShowCodeUpdate(code) {
 		if (!code) this.setState({showCode: null});
 		else this.setState({showCode: code});
 	}
 	
-	toColorContainer(c) {
-		return <ColorContainer key={c.id} {...c} showCode={this.state.code}/>;
+	handleStrokeUpdate(s) {
+		this.props.handleStrokeUpdate(s);
 	}
 	
-	handleInput(cInd) {
-		
+	toColorContainer(c) {
+		return <ColorContainer
+			key={c.id} {...c}
+			color={c}
+			showCode={this.state.code}
+			onClick={this.handleSelectColor}
+		/>;
 	}
+	
+	// handleInput(cInd) {
+		
+	// }
 	
 	handleSelectColor(c) {
 		this.props.onClick(c);
