@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/color-pad/static/css/main.de4b7b5d.chunk.css",
+    "main.js": "/color-pad/static/js/main.c25d1fee.chunk.js",
+    "main.js.map": "/color-pad/static/js/main.c25d1fee.chunk.js.map",
+    "runtime~main.js": "/color-pad/static/js/runtime~main.06bfea01.js",
+    "runtime~main.js.map": "/color-pad/static/js/runtime~main.06bfea01.js.map",
+    "static/js/2.81db6ac8.chunk.js": "/color-pad/static/js/2.81db6ac8.chunk.js",
+    "static/js/2.81db6ac8.chunk.js.map": "/color-pad/static/js/2.81db6ac8.chunk.js.map",
+    "index.html": "/color-pad/index.html",
+    "precache-manifest.c17015e7260784c876db72aed28c2342.js": "/color-pad/precache-manifest.c17015e7260784c876db72aed28c2342.js",
+    "service-worker.js": "/color-pad/service-worker.js",
+    "static/css/main.de4b7b5d.chunk.css.map": "/color-pad/static/css/main.de4b7b5d.chunk.css.map",
+    "static/media/share-icon.svg": "/color-pad/static/media/share-icon.0caf3e23.svg",
+    "static/media/trash-icon.svg": "/color-pad/static/media/trash-icon.bac2c831.svg"
+  }
+}
