@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/color-pad/static/css/main.de4b7b5d.chunk.css",
-    "main.js": "/color-pad/static/js/main.c25d1fee.chunk.js",
-    "main.js.map": "/color-pad/static/js/main.c25d1fee.chunk.js.map",
+    "main.css": "/color-pad/static/css/main.37ebc62d.chunk.css",
+    "main.js": "/color-pad/static/js/main.f147277e.chunk.js",
+    "main.js.map": "/color-pad/static/js/main.f147277e.chunk.js.map",
     "runtime~main.js": "/color-pad/static/js/runtime~main.06bfea01.js",
     "runtime~main.js.map": "/color-pad/static/js/runtime~main.06bfea01.js.map",
     "static/js/2.81db6ac8.chunk.js": "/color-pad/static/js/2.81db6ac8.chunk.js",
     "static/js/2.81db6ac8.chunk.js.map": "/color-pad/static/js/2.81db6ac8.chunk.js.map",
     "index.html": "/color-pad/index.html",
-    "precache-manifest.c17015e7260784c876db72aed28c2342.js": "/color-pad/precache-manifest.c17015e7260784c876db72aed28c2342.js",
+    "precache-manifest.590cab2c5e989b6437d83fec5a1a808e.js": "/color-pad/precache-manifest.590cab2c5e989b6437d83fec5a1a808e.js",
     "service-worker.js": "/color-pad/service-worker.js",
-    "static/css/main.de4b7b5d.chunk.css.map": "/color-pad/static/css/main.de4b7b5d.chunk.css.map",
-    "static/media/share-icon.svg": "/color-pad/static/media/share-icon.0caf3e23.svg",
-    "static/media/trash-icon.svg": "/color-pad/static/media/trash-icon.bac2c831.svg"
+    "static/css/main.37ebc62d.chunk.css.map": "/color-pad/static/css/main.37ebc62d.chunk.css.map",
+    "static/media/clear-icon.svg": "/color-pad/static/media/clear-icon.d862ac95.svg",
+    "static/media/collapse-icon.svg": "/color-pad/static/media/collapse-icon.5e4defaa.svg",
+    "static/media/save-icon.svg": "/color-pad/static/media/save-icon.5b942eb3.svg"
   }
 }
