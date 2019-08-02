@@ -3,10 +3,6 @@ import paletteTemplate from '../../../helpers/paletteTemplate';
 import './Palette.css';
 
 class CodeContainer extends Component {
-	// componentDidMount() {
-		// console.log('<CodeContainer> componentDidMount');
-	// }
-	
 	render() {
 		const codeDisplay = 'd';
 		return (
@@ -17,19 +13,16 @@ class CodeContainer extends Component {
 	}
 }
 
-const Toggle = ({type, onClick, label, children}) => (
-	<div className={`btn ${type}`} onClick={onClick}>
-		<p>{label ? label : children}</p>
-	</div>
-);
-
-const Color = ({color, onClick}) => <div className="color-individual" style={{backgroundColor: `#${color.hex}`}} onClick={() => onClick(color)}></div>;
-
 const ColorContainer = ({color, showCode, onClick}) => {
 	const codeContainer = showCode ? <CodeContainer/> : null;
+	const c = color.color; //fix
 	return (
 		<div className="color-container">
-			<Color {...color} onClick={onClick}/>
+			<div
+				className="color-individual"
+				style={{backgroundColor: `#${c.hex}`}}
+				onClick={() => onClick(c)}
+			></div>
 			{codeContainer}
 		</div>
 	);
@@ -66,10 +59,6 @@ class Palette extends Component {
 		/>;
 	}
 	
-	// handleInput(cInd) {
-		
-	// }
-	
 	handleSelectColor(c) {
 		this.props.onClick(c);
 	}
@@ -80,12 +69,16 @@ class Palette extends Component {
 			<div className="palette">
 				<div className="palette-header">
 					<div>
-						<h1>Pick it!</h1>
+						<h1>Pick a color!</h1>
 					</div>
 					<div id="palette-button-container">
-						<Toggle type="radio" label="show codes"/>
-						{this.state.showCode && <Toggle type="radio-slide"></Toggle>}
+						<button onClick={() => this.handleShowCodeUpdate()}>no code</button>
+						<button onClick={() => this.handleShowCodeUpdate('hex')}>#hex</button>
+						<button onClick={() => this.handleShowCodeUpdate('hex')}>rgb()</button>
 					</div>
+				</div>
+				<div className="palette-size-buttons">
+					<input defaultValue="16" type="range" min="4" max="64" step="4" onChange={this.handleStrokeUpdate}/>
 				</div>
 				<div className="palette-colors">
 					<div className="color-containers">

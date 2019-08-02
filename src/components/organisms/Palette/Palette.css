@@ -1,6 +1,6 @@
 /*Palette.css*/
 .palette {
-	box-shadow: 0 2px 6px -1px #7f8c8d;
+	/* box-shadow: 0 2px 6px -1px #7f8c8d; */
 	border: 1px solid rgba(96, 121, 125,0.4);
 	background-color: #fff;
 	margin: 24px;
@@ -17,8 +17,11 @@
 .palette-header > div {
 	margin: 12px auto;
 }
-.palette-colors {
-	
+.palette-size-buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 24px 48px;
+	border-bottom: 1px solid rgba(96, 121, 125,0.4);
 }
 .color-containers {
 	display: grid;
@@ -39,6 +42,22 @@
 }
 .code-container {
 	
+}
+
+/*SizeButton.css*/
+.size-btn {
+    display: block;
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+button {
+	padding: 8px 12px;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
 }
 
 /*media queries*/

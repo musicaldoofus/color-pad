@@ -22,21 +22,47 @@ h1, h2, h3, h4, h5, h6, p {
 .container {
 	width: 100%;
 	height: 100%;
+	display: flex;
+    flex-direction: column;
 }
-.header.subtle {
+.header-subtle {
     width: 100%;
-    margin: 0 auto;
     text-align: center;
 	position: absolute;
 	top: 0;
+	display: flex;
 }
-.blob {
-	width: 40px;
-	height: 40px;
-	border-radius: 100%;
-	background-color: red;
-	display: block;
+.header-subtle > div {
+    margin: auto;
+    padding: 0 24px 24px 24px;
+    border: 1px solid rgba(96, 121, 125,0.4);
+    border-radius: 2px;
+    border-top: none;
+}
+.header-icons {
+	display: flex;
+	justify-content: space-evenly;
+}
+.header-subtle > div > div {
+    margin-top: 12px;
+}
+.header-icons > img {
+	max-height: 24px;
+	cursor: pointer;
+}
+input[type="range"] {
+	width: 100%;
+}
+.center-absolute {
 	position: absolute;
-	top: var(--data-y);
-	left: var(--data-x);
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+    border: 1px solid rgba(96, 121, 125,0.4);
+	border-top: none;
+	padding: 12px 24px;
+	background-color: #fff;
+}
+.center-absolute > div {
+	margin-top: 8px;
 }
