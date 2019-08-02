@@ -9,6 +9,9 @@ body, html {
 	padding: 0;
 	background-color: #fff;
 }
+body {
+	overflow: hidden;
+}
 div#root {
 	margin: 0;
 	padding: 0;
@@ -25,31 +28,6 @@ h1, h2, h3, h4, h5, h6, p {
 	display: flex;
     flex-direction: column;
 }
-.header-subtle {
-    width: 100%;
-    text-align: center;
-	position: absolute;
-	top: 0;
-	display: flex;
-}
-.header-subtle > div {
-    margin: auto;
-    padding: 0 24px 24px 24px;
-    border: 1px solid rgba(96, 121, 125,0.4);
-    border-radius: 2px;
-    border-top: none;
-}
-.header-icons {
-	display: flex;
-	justify-content: space-evenly;
-}
-.header-subtle > div > div {
-    margin-top: 12px;
-}
-.header-icons > img {
-	max-height: 24px;
-	cursor: pointer;
-}
 input[type="range"] {
 	width: 100%;
 }
@@ -63,6 +41,9 @@ input[type="range"] {
 	padding: 12px 24px;
 	background-color: #fff;
 }
-.center-absolute > div {
-	margin-top: 8px;
+.btn {
+	transition: all ease 0.2s;
+}
+.btn:hover {
+	transform: scale(1.2);
 }

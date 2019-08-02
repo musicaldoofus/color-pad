@@ -8,7 +8,7 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			stroke: 16,
+			stroke: 32,
 			colorFocus: paletteTemplate[0].color
 		};
 		this.handleColorUpdate = this.handleColorUpdate.bind(this);

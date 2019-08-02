@@ -1,0 +1,83 @@
+/*Canvas.css*/
+.canvas-bg {
+	background-image: url(../../../media/transparency-template.png);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+/*menu*/
+.top-menu {
+	transition: all ease 0.2s;
+}
+.top-menu.expanded {
+	top: 0;
+}
+.top-menu.collapsed {
+	top: -72px;
+}
+.top-menu > div {
+	margin-top: 16px;
+}
+.top-menu > div:first-child {
+	border-bottom: 1px solid rgba(96, 121, 125,0.4);
+}
+.header-icons {
+	display: flex;
+	justify-content: space-evenly;
+	transition: all ease 0.2s;
+	opacity: 1;
+}
+.header-icon {
+	height: 32px;
+	cursor: pointer;
+	opacity: inherit;
+}
+.header-icons.expanded {
+	opacity: 1;
+}
+.header-icons.collapsed {
+	opacity: 0;
+}
+
+/*collapse*/
+.collapse-btn {
+	cursor: pointer;
+	transition: all ease 0.2s;
+}
+.collapse-btn > div {
+	text-align: center;
+}
+.collapse-btn > div > span {
+	display: block;
+	height: 4px;
+	background-color: rgb(96, 121, 125);
+	border-radius: 4px;
+	margin: 4px auto;
+	transition: all ease 0.2s;
+}
+.collapse-btn:hover {
+	transform: scaleX(1.2);
+}
+
+/*collapsed*/
+.collapse-btn.collapsed > div:nth-child(1) > span {
+	width: 44px;
+}
+.collapse-btn.collapsed > div:nth-child(2) > span {
+	width: 22px;
+}
+.collapse-btn.collapsed > div:nth-child(3) > span {
+	width: 6px;
+}
+
+/*expanded*/
+.collapse-btn.expanded > div:nth-child(1) > span {
+	width: 6px;
+}
+.collapse-btn.expanded > div:nth-child(2) > span {
+	width: 22px;
+}
+.collapse-btn.expanded > div:nth-child(3) > span {
+	width: 44px;
+}
